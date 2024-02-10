@@ -1,2 +1,3 @@
 <?php
-echo "home controller";
+// echo "home controller";
+require views_path("home");
