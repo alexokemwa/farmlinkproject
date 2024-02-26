@@ -1,20 +1,30 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><?php echo esc(APP_NAME);?></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
+  <div class="container-fluid ">
+    <a class="navbar-brand myclasslogomarginright" href="#"><?php echo esc(APP_NAME);?></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="navbarSupportedContent" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php?=page_name">Home</a>
+    
+    <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header ">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><?php echo esc(APP_NAME);?></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div> 
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end  pe-3">
+        <li class="nav-item  myclass  ">
+          <a class="nav-link active" aria-current="page"  href="index.php?page_name=home">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+        <li class="nav-item myclass">
+          <a class="nav-link"  href="index.php?page_name=markets">markets</a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item myclass">
+          <a class="nav-link" href="index.php?page_name=orders">orders</a>
+        </li>
+        <li class="nav-item dropdown myclass">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            user
+            reports
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Account</a></li>
@@ -23,14 +33,26 @@
             <li><a class="dropdown-item" href="#">delete</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        <li class="nav-item dropdown  myclass">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            account
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">view</a></li>
+            <li><a class="dropdown-item" href="#">update</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">delete</a></li>
+          </ul>
         </li>
+        
       </ul>
-      <form class="d-flex" role="search">
+      
+      <form class="d-flex mt-3 ms-auto"   role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
+      </div>
+
     </div>
   </div>
 </nav>
