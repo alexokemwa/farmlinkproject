@@ -1,0 +1,17 @@
+/*style navbar*/
+.myclass{
+    margin-right: 40px;
+    font-size: 22px;   
+}
+.myclass:hover{
+    background: rgb(224, 224, 239);
+}
+/*separate logo and pages */
+.myclasslogomarginright{
+    margin-right: 70px;
+}
+
+/*****separate content from navbar***/
+.myclassmargintop{
+    margin-top: 60px;
+}
