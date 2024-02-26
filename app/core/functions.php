@@ -1,11 +1,11 @@
 <?php
 
-function show($data)
-{
-    echo "<pre>";
-    print_r($data);
-    echo "</pre>";
-}
+// function show($data)
+// {
+//     echo "<pre>";
+//     print_r($data);
+//     echo "</pre>";
+// }
 
 function views_path($view)
 {
