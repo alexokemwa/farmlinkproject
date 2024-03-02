@@ -14,23 +14,24 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end  pe-3">
         <li class="nav-item  myclass  ">
-          <a class="nav-link active" aria-current="page"  href="index.php?page_name=home">Home</a>
+          <a class="nav-link active" aria-current="page"  href="?page_name=home">Home</a>
         </li>
         <li class="nav-item myclass">
-          <a class="nav-link"  href="index.php?page_name=markets">markets</a>
+          <a class="nav-link"  href="?page_name=deliveries">deliveries</a>
         </li>
         <li class="nav-item myclass">
-          <a class="nav-link" href="index.php?page_name=orders">orders</a>
+          <!-- todo:only display for driver by database authetication -->
+          <a class="nav-link" href="?page_name=fixses">fixses</a>
         </li>
         <li class="nav-item dropdown myclass">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             reports
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Account</a></li>
-            <li><a class="dropdown-item" href="#">number</a></li>
+            <li><a class="dropdown-item" href="?page_name=orders">orders</a></li>
+            <li><a class="dropdown-item" href="?page_name=payment">payment</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">delete</a></li>
+            <li><a class="dropdown-item" href="?page_name=markets">markets</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown  myclass">
@@ -38,10 +39,10 @@
             account
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">view</a></li>
-            <li><a class="dropdown-item" href="#">update</a></li>
+            <li><a class="dropdown-item" href="?page_name=view">view</a></li>
+            <li><a class="dropdown-item" href="?page_name=updateacount">update</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">delete</a></li>
+            <li><a class="dropdown-item" href="?page_name=deleteaccount">delete</a></li>
           </ul>
         </li>
         
