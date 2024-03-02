@@ -1,8 +1,8 @@
 <?php
-//the navbar of home employees view is requiresd in all farmers view pages
+//the navbar of home farmers view is requiresd in all farmers view pages
 require views_path("employeeOtherviews/constantnavview");?>
 <div class="container-fluid myclassmargintop" >
-        <h1>homepage</h1>
+        <h1> employee orders report</h1>
         <h4><?php echo APP_NAME;?></h4>
     </div>
 
