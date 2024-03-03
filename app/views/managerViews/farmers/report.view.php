@@ -2,7 +2,7 @@
 
   <?php require views_path("managerOtherviews/nav");?>
     <div class="container-fluid myclassmargintop">
-        <h1>homepage</h1>
+        <h1>manager farmer  reports </h1>
         <h4><?php echo APP_NAME;?></h4>
     </div>
 
