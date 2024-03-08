@@ -15,3 +15,9 @@
 .myclassmargintop{
     margin-top: 60px;
 }
+/* style index btn */
+.mycss-stylebtn{
+    font-size: 23px;
+    color: white;
+    background-color: blue;
+}
