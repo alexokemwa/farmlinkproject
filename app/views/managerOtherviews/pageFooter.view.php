@@ -9,25 +9,30 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link  px-3"  href="#"><i class="fa-solid fa-truck-fast"></i>
-              <span class="d-block">Orders</span>
+            <a class="nav-link  px-3"  href="#"><i class="fa-solid fa-users"></i></i>
+              <span class="d-block">farmers</span>
             </a>
           </li>
           <li class="nav-item">
           <!-- todo:only display for driver by database authetication -->
 
-            <a class="nav-link px-3"  href="#"><i class="fa-solid fa-wrench"></i>
-              <span class="d-block">fixses</span>
+            <a class="nav-link px-3"  href="#"><i class="fa-solid fa-address-book"></i></i>
+              <span class="d-block">emp</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link px-3"  href="#"><i class="fa-solid fa-file-import"></i>
-              <span class="d-block">report</span>
+            <a class="nav-link px-3"  href="#"><i class="fa-solid fa-tower-broadcast"></i>
+              <span class="d-block">comm</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link px-3" href="#"><i class="fa-solid fa-magnifying-glass"></i>
               <span class="d-block">Search</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#"><i class="fa-solid fa-house-laptop"></i>
+              <span class="d-block">prop</span>
             </a>
           </li>
           <li class="nav-item">
