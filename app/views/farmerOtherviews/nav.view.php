@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
   <div class="container-fluid ">
-    <a class="navbar-brand myclasslogomarginright" href="#"><?php echo esc(APP_NAME);?></a>
+    <a class="navbar-brand myclasslogomarginright" href="?page_name=home"><?php echo esc(APP_NAME);?></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="navbarSupportedContent" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,10 +17,10 @@
           <a class="nav-link active" aria-current="page"  href="?page_name=home">Home</a>
         </li>
         <li class="nav-item myclass">
-          <a class="nav-link"  href="index.php?page_name=markets">markets</a>
+          <a class="nav-link"  href="?page_name=markets">markets</a>
         </li>
         <li class="nav-item myclass">
-          <a class="nav-link" href="index.php?page_name=orders">orders</a>
+          <a class="nav-link" href="?page_name=orders">orders</a>
         </li>
         <li class="nav-item dropdown myclass">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
