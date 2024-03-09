@@ -6,8 +6,8 @@ require views_path("managerOtherviews/mainindex/indexconstantnavview");?>
 require "../app/core/managercores/logintosytem.php";
 
 ?>       
-<form action="?page_name=loginmanager" method="post">
-            <h3><i class="fa fa-user"></i>login</h3>
+<form action="?page_name=login" method="post">
+            <h3><i class="fa fa-user"></i>manager login</h3>
             <br>
     
             <div class="mb-3">
@@ -32,3 +32,5 @@ require "../app/core/managercores/logintosytem.php";
 
 
 <?php require views_path("otherviews/footer");?>
+<?php require views_path("managerOtherviews/indexpageFooter");?>
+
