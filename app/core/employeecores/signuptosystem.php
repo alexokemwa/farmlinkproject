@@ -4,9 +4,7 @@
     $username = $_POST["username"];
     $email = $_POST["email"];
     $phone = $_POST["phone"];
-    $location = $_POST["location"];
-    $farmer_type = $_POST["farmer_type"];
-    $goods = $_POST["goods"];
+    $employee_type = $_POST["employee_type"];
     $password = $_POST["password"];
     $passwordRepeat = $_POST["repeat_password"];
 
@@ -14,7 +12,7 @@
 
     $errors = array();
 
-    if (empty($phone) || empty($username) || empty($location) || empty($farmer_type)|| empty($email) || empty($password) || empty($passwordRepeat)) {
+    if (empty($phone) || empty($username)  || empty($employee_type)|| empty($email) || empty($password) || empty($passwordRepeat)) {
     array_push($errors,"All fields are required");
   
   }
@@ -33,7 +31,7 @@
   require "../app/core/database.php";
 
 
-  $sql = "SELECT * FROM farmers WHERE email = '$email'";
+  $sql = "SELECT * FROM employees WHERE email = '$email'";
   $result = mysqli_query($conn, $sql);
   $rowCount = mysqli_num_rows($result);
   if ($rowCount>0) {
@@ -47,11 +45,11 @@
    else
    {
     
-    $sql = "INSERT INTO farmers (username, email,phone,location,farmer_type,goods, password) VALUES ( ?, ?, ?,?,?,?,? )";
+    $sql = "INSERT INTO employees (username, email,phone,employee_type, password) VALUES ( ?, ?, ?,?,? )";
     $stmt = mysqli_stmt_init($conn);
     $prepareStmt = mysqli_stmt_prepare($stmt,$sql);
     if ($prepareStmt) {
-        mysqli_stmt_bind_param($stmt,"sssssss",$username, $email,$phone,$location,$farmer_type,$goods, $passwordHash);
+        mysqli_stmt_bind_param($stmt,"sssss",$username, $email,$phone,$employee_type, $passwordHash);
         mysqli_stmt_execute($stmt);
         echo "<div class='alert alert-success'>You are registered successfully.</div>";
     }else

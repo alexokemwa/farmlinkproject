@@ -5,7 +5,7 @@
                 require "../app/core/database.php";
 
                 
-                $sql = "SELECT * FROM farmers WHERE email = '$email'";
+                $sql = "SELECT * FROM employees WHERE email = '$email'";
                 $result = mysqli_query($conn, $sql);
                 $user = mysqli_fetch_assoc($result);
                 if ($user) {
