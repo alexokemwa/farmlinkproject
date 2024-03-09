@@ -17,7 +17,7 @@
       <a class="nav-link" href="?page_name=signup">Signup</a>
     </li>
     <li class="nav-item myclass">
-      <a class="nav-link" href="?page_name=login">Login</a>
+      <a class="nav-link" href="?page_name=loginmanager">Login</a>
     </li>
   </ul>
 </div>
