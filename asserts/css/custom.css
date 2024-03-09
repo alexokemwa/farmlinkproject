@@ -9,11 +9,21 @@
 /*separate logo and pages */
 .myclasslogomarginright{
     margin-right: 70px;
+    
 }
 
 /*****separate content from navbar***/
 .myclassmargintop{
-    margin-top: 60px;
+    margin-top: 80px;
+}
+.myclassmargintop > form > h3{
+    text-align: center;
+    padding: 4px;
+    text-align: center;
+    border: solid rgba(212, 171, 244, 0.889);
+    border-radius: 50px 50px;
+    background-color: rgb(221, 215, 241);
+      
 }
 /* style index btn */
 .mycss-stylebtn{
