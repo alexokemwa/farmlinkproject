@@ -31,3 +31,41 @@
     color: white;
     background-color: blue;
 }
+/* side nav styling */
+.myclassstylesidebar{
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.mystylesidebarsticky{
+    position: relative;
+    top: 0;
+    height: calc(100vh - 56px);
+    padding-top: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgb(247, 248, 247);
+
+}
+.mystlenav {
+    padding: 10px 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.mystlenav:hover {
+    background-color: rgb(195, 189, 189);
+    color: #007bff;
+}
+
+.mystlenav.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.mystlenav.active:hover {
+    background-color: #007bff;
+    color: #fff;
+}
