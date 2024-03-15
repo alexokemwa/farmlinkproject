@@ -45,5 +45,4 @@ require views_path("managerOtherviews/mainindex/indexconstantnavview");?>
               </div>
         </div>
 <?php require views_path("otherviews/footer");?>
-<?php require views_path("managerOtherviews/indexpageFooter");?>
 

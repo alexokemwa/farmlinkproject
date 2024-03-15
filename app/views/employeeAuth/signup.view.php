@@ -51,5 +51,4 @@ require "../app/core/employeecores/signuptosystem.php";
 
 
 <?php require views_path("otherviews/footer");?>
-<?php require views_path("employeeOtherviews/indexpageFooter");?>
 
