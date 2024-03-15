@@ -8,7 +8,8 @@ require views_path("farmerOtherviews/constantnavview");?>
             <div class="col-2 col-lg d-none d-lg-block"> <!-- Apply classes to hide on smaller screens -->
                 <?php require views_path("farmerOtherviews/farmerhomesidebar1nav");?>
             </div> 
-            <div class="col-12 col-lg-8 mystylemainbodyfullview" > <!-- Adjust columns for larger screens -->
+            
+            <div class="col-12 col-lg-8 mystylemainbodyfullview " > <!-- Adjust columns for larger screens -->
             <div class="row mb-5">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <div class="card mystlylecardheight">
