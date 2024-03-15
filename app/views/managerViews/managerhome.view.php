@@ -3,7 +3,17 @@
   <?php require views_path("managerOtherviews/nav");?>
     <div class="container-fluid myclassmargintop">
         <h1>homepage</h1>
-        <h4><?php echo APP_NAME;?></h4>
+        <div class="row">
+           <div class="col-2 col-lg d-none d-lg-block"> <!-- Apply classes to hide on smaller screens -->
+              <?php require views_path("managerOtherviews/sidebarnav");?>
+          
+
+           </div> 
+           <div class="col-12 col-lg-10"> <!-- Adjust columns for larger screens -->
+           
+           </div>
+        </div>
+      
     </div>
 
 <?php require views_path("otherviews/footer");?>
