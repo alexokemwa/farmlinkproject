@@ -23,10 +23,10 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="?page_name=orders">orders</a></li>
-            <li><a class="dropdown-item" href="?page_name=payment">payment</a></li>
+            <li><a class="dropdown-item" href="?page_name=payments">payment</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="?page_name=report">reports</a></li>
-            <li><a class="dropdown-item" href="?page_name=accounts">accounts</a></li>
+            <li><a class="dropdown-item" href="?page_name=account">accounts</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown myclass">
