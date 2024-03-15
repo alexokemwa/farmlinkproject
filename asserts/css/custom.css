@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(254, 255, 254);
+}
 /*style navbar*/
 .myclass{
     margin-right: 40px;
@@ -10,11 +13,42 @@
 .myclasslogomarginright{
     margin-right: 70px;
     
+    
 }
+
 
 /*****separate content from navbar***/
 .myclassmargintop{
     margin-top: 80px;
+}
+.myclassmargintop h1 {
+    text-align: center;
+    background-color:rgb(170, 170, 242);
+}
+.myclassmargintop h4{
+    text-align: center;
+}
+/* view full body content */
+.mystylemainbodyfullview{
+    padding-bottom: 120px;
+}
+/* card styling  */
+.mystylemainbodyfullview .card-text{
+    font-size: 20px;
+}
+.mystylemainbodyfullview .card-body{
+   background-color: rgb(216, 243, 216); 
+}
+.mystylemainbodyfullview .card-body:hover{
+    background-color:aliceblue;
+    color: blue;
+}
+.mystylemainbodyfullview .card-title{
+    background-color:rgb(150, 249, 150);
+    color: blue;
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
 }
 .myclassmargintop > form > h3{
     text-align: center;
