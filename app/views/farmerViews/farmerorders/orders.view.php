@@ -11,18 +11,18 @@ require views_path("farmerOtherviews/constantnavview");?>
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <div class="card mystlylecardheight">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">order history</h5>
+                        <p class="card-text">view your order history here</p>
+                        <a href="?page_name=orderhistory" class="btn btn-primary">click here</a>
                     </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="card mystlylecardheight">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">active orders</h5>
+                        <p class="card-text">view your active orders</p>
+                        <a href="?page_name=activeorders" class="btn btn-primary">click here</a>
                     </div>
                     </div>
                 </div>
@@ -31,18 +31,18 @@ require views_path("farmerOtherviews/constantnavview");?>
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <div class="card mystlylecardheight">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">pending orders</h5>
+                        <p class="card-text">view pending orders and make neccessary actions</p>
+                        <a href="?page_name=pendingorders" class="btn btn-primary">click here</a>
                     </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="card mystlylecardheight">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">ontransit orders</h5>
+                        <p class="card-text">check your ontransit orders and do neccessary actions</p>
+                        <a href="?page_name=ontransit" class="btn btn-primary">click here</a>
                     </div>
                     </div>
                 </div>
@@ -56,3 +56,4 @@ require views_path("farmerOtherviews/constantnavview");?>
 
 <?php require views_path("otherviews/footer");?>
 <?php require views_path("farmerOtherviews/pageFooter");?>
+
