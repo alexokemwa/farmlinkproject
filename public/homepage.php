@@ -10,6 +10,8 @@ if(file_exists("../app/controllers/farmers/" . $controller . ".php")) {
     require "../app/controllers/farmers/account/" . $controller . ".php";
 } elseif(file_exists("../app/controllers/farmers/reports/" . $controller . ".php")) {
     require "../app/controllers/farmers/reports/" . $controller . ".php";
+}elseif(file_exists("../app/controllers/farmers/farmerorders/" . $controller . ".php")) {
+    require "../app/controllers/farmers/farmerorders/" . $controller . ".php";
 }else {
     echo "Controller not found";
 }
