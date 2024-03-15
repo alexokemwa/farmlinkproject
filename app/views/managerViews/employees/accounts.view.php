@@ -8,7 +8,7 @@
             <?php require views_path("managerOtherviews/sidebarnav");?>
            
            </div> 
-           <div class="col-12 col-lg-10"> <!-- Adjust columns for larger screens -->
+           <div class="col-12 col-lg-10 mystylemainbodyfullview"> <!-- Adjust columns for larger screens -->
            <section>
           <h2 class="myclassacounthead">employees accounts</h2>
           <div class="container"></div>
