@@ -2,24 +2,20 @@
               <div class="sidebar-sticky mystylesidebarsticky">
                 <ul class="nav flex-column ">
                   <li class="nav-item">
-                    <a class="nav-link  mystlenav" href="?page_name=orderhistory">
-                       order history
-                    </a>
+                  <img src="../asserts/images/farmerimages/cofee.jpeg" alt="tea">
+                    
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link  mystlenav" href="?page_name=activeorders">
-                    active_orders
-                    </a>
+                  <img src="../asserts/images/farmerimages/tomato.jpeg" alt="">
+                    
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link  mystlenav" href="?page_name=pendingorders">
-                    pending_orders
-                    </a>
+                  <img src="../asserts/images/farmerimages/banana.jpeg" alt="">
+
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link  mystlenav" href="?page_name=ontransit">
-                    ontransit_orders
-                    </a>
+                  <img src="../asserts/images/farmerimages/tea.jpeg" alt="">
+
                   </li>
                   
                 </ul>
