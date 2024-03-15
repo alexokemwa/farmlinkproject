@@ -30,7 +30,12 @@ body{
 }
 /* view full body content */
 .mystylemainbodyfullview{
-    padding-bottom: 120px;
+    padding-bottom: 500px;
+    position: relative;
+    height: 100vh;
+    padding-top: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 /* card styling  */
 .mystylemainbodyfullview .card-text{
@@ -49,6 +54,8 @@ body{
     text-align: center;
     padding: 10px;
     font-size: 24px;
+    text-transform: uppercase;
+
 }
 .myclassmargintop > form > h3{
     text-align: center;
@@ -73,6 +80,7 @@ body{
     overflow-x: hidden;
     overflow-y: auto;
 }
+
 .mystylesidebarsticky{
     position: relative;
     top: 0;
