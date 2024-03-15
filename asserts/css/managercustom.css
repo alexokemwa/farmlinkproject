@@ -3,3 +3,12 @@
         transform: rotate(-90deg);
     }
 }
+.myclassacounthead{
+    text-align: center;
+    font-family: 50px;
+    font-size: 30px;
+    color: blue;
+    text-transform: uppercase;
+    margin: 10px;
+    background-color: rgb(244, 196, 137);
+}
