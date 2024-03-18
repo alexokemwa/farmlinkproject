@@ -1,3 +1,16 @@
 .mystlylecardheight{
     height: 250px;
 }
+.orderbg{
+    /* background-image: url(../images/farmerimages/tea.jpeg);
+    background-size: cover; 
+    background-position: center; */
+    background-color:rgb(232, 248, 239);
+}
+.orderbtnsyle{
+    font-size: 24px;
+}
+.ordercart{
+    float: right; 
+
+}
