@@ -1,27 +1,9 @@
 <?php
+require "../app/core/database.php";
 
-if(isset($_GET['update_id'])){
-    $id = $_GET['update_id'];
-    require "../database.php";
-    // Include the file that establishes the database connection
-
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
-
-    $sqli = "SELECT * FROM farmers where id=$id";
-    $all_product = mysqli_query($conn, $sqli);
-
-    $row = null; // Initialize $row
-    if (mysqli_num_rows($all_product) > 0) {
-        $row = mysqli_fetch_assoc($all_product);
-    } else {
-        echo "No record found";
-    }
-}
-if (isset($_POST["update"])) {
-    if(isset($_GET['id_new'])){
-        $id = $_GET['id_new'];
-    }
+if (isset($_SESSION["user"])) {
+    if (isset($_POST["submit"])) {
+    $user_id = $_SESSION["user"];
     $username = $_POST["username"];
     $email = $_POST["email"];
     $phone = $_POST["phone"];
@@ -52,22 +34,21 @@ if (isset($_POST["update"])) {
             echo "<div class='alert alert-danger'>$error</div>";
         }
     } else {
-        require "../database.php";
+        
 
 
         $sql = "UPDATE farmers SET username='$username', email='$email',phone = '$phone',location = '$location',
-        farmer_type = '$farmer_type',goods = '$goods', password='$passwordHash' WHERE id = $id";
+        farmer_type = '$farmer_type',goods = '$goods', password='$passwordHash' WHERE id = $user_id";
         $result = mysqli_query($conn, $sql);
         if ($result) {
-            
+            echo"<h3>update succussfully</h3>";
         } else {
             die("Something went wrong");
         }
-        // }if (isset($_SESSION["user"])) {
-        //             header("Location: ?page_name=login");
-        //  }else{
-        //   header("Location: admin/users.php");
-        //  }
+        
+         
+        
     }
 }
 
+}
