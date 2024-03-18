@@ -1,4 +1,11 @@
 <?php
+session_start();
+if (isset($_SESSION["user"])) {
+    header("Location: homepage.php?page_name=home");
+ }
+
+?>
+<?php
 //the navbar of home farmers view is requiresd in all farmers view pages
 require views_path("farmerOtherviews/mainindex/indexconstantnavview");?>
 

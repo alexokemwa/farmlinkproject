@@ -32,5 +32,4 @@ require "../app/core/managercores/logintosytem.php";
 
 
 <?php require views_path("otherviews/footer");?>
-<?php require views_path("managerOtherviews/indexpageFooter");?>
 
