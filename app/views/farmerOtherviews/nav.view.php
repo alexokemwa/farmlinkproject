@@ -44,7 +44,10 @@
             <li><a class="dropdown-item" href="?page_name=deleteaccount">delete</a></li>
           </ul>
         </li>
-        
+          <li class="nav-item myclass d-lg-block">
+            <a class="nav-link" href="../app/core/farmercores/logout.php"><i class="fa-solid fa-right-from-bracket"></i></a>
+          </li>
+
       </ul>
       
       <form class="d-flex mt-3 ms-auto"   role="search">
