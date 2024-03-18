@@ -32,7 +32,7 @@ require views_path("farmerOtherviews/constantnavview");?>
                      update your account could you like to cotinue</strong></p>
                     <div class="d-flex justify-content-between">
                     
-                        <a href="updatelinker?update_id='.$user_id.'" class="btn btn-primary">update</a>
+                        <a href="?page_name=viewupdateform" class="btn btn-primary">update</a>
                         <a href="?page_name=home" class="btn btn-primary">cancel</a>
                     </div>
                    </div>

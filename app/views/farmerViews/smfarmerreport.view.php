@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION["user"])) {
+    header("Location: index.php?page_name=login");
+ }
+
+?>
 <!-- 
     ul class="dropdown-menu">
             <li><a class="dropdown-item" href="?page_name=order">orders</a></li>

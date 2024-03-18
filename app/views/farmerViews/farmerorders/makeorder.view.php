@@ -92,15 +92,15 @@ require views_path("farmerOtherviews/constantnavview");?>
                                 <label class="input-group-text" for="inputGroupSelect01" >goods_type</label>
                                 <select name="goods_type" class="form-select" id="inputGroupSelect01">
                                     <option selected>Choose...</option>
-                                    <option value="individual">cereals</option>
-                                    <option value="individual">perishables</option>
+                                    <option value="cereals">cereals</option>
+                                    <option value="perishables">perishables</option>
                                </select>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon1">goods_weight</span>
-                                <input type="text" class="form-control" placeholder="weight" aria-label="goods_weight" name="goods_weight" aria-describedby="basic-addon1">
+                                <input type="text" id="goods_weight" class="form-control" placeholder="weight" aria-label="goods_weight" name="goods_weight" aria-describedby="basic-addon1" oninput="calculate()" required>
                             </div>
                         </div>
                        
@@ -110,7 +110,7 @@ require views_path("farmerOtherviews/constantnavview");?>
                                     <div class="col-md-4">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">total_price</span>
-                                            <input type="text" class="form-control" placeholder=<?php echo "$payment"?> aria-label="total_price" name="total_price" aria-describedby="basic-addon1">
+                                            <input type="text" id="total_price" class="form-control" placeholder=<?php echo "$payment"?> aria-label="total_price" name="total_price" aria-describedby="basic-addon1" readonly required>
                                         </div>
                                     </div>
                             </div>

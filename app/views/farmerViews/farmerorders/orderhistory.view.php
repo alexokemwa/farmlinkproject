@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION["user"])) {
+    header("Location: index.php?page_name=login");
+ }
+
+?>
 <?php require views_path("otherviews/header");?>
 <?php require "../app/core/database.php"; ?>
 
@@ -63,7 +70,7 @@ require views_path("farmerOtherviews/constantnavview");?>
                 color:white; 
                 font-weight:70px;
                 '>pay</a></button>
-                          <button class='btn btn-danger'><a href='../app/core/farmercores/deleterorder.php?del_id=$order_id''class = 'text-light'style = 'text-decoration:none;
+                          <button class='btn btn-danger'><a href='../app/core/farmercores/deleteorderhistory.php?del_id=$order_id''class = 'text-light'style = 'text-decoration:none;
                 font-size:20px;
                 color:white; 
                 font-weight:70px;
@@ -77,11 +84,11 @@ require views_path("farmerOtherviews/constantnavview");?>
             else{
                 echo "
                 <button class='btn btn-primary'style='
-                ;'><a href='products.php'class = 'text-light' style = 'text-decoration:none;
+                ;'><a href='?page_name=makeorder'class = 'text-light' style = 'text-decoration:none;
                 font-size:29px;
                 color:white; 
                 font-weight:70px;
-                '>add user</a></button>";
+                '>add order</a></button>";
               }
           ?>
           

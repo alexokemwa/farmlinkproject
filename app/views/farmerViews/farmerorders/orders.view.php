@@ -1,4 +1,11 @@
 <?php
+session_start();
+if (!isset($_SESSION["user"])) {
+    header("Location: index.php?page_name=login");
+ }
+
+?>
+<?php
 //the navbar of home farmers view is requiresd in all farmers view pages
 require views_path("farmerOtherviews/constantnavview");?>
         <div class="container-fluid myclassmargintop" >
@@ -32,7 +39,7 @@ require views_path("farmerOtherviews/constantnavview");?>
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <div class="card mystlylecardheight">
                     <div class="card-body">
-                        <h5 class="card-title">cart orders</h5>
+                        <h5 class="card-title">pending orders</h5>
                         <p class="card-text">view pending orders and make neccessary actions</p>
                         <a href="?page_name=cart" class="btn btn-primary">click here</a>
                     </div>

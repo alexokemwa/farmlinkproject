@@ -1,4 +1,11 @@
 <?php
+session_start();
+if (!isset($_SESSION["user"])) {
+    header("Location: index.php?page_name=login");
+ }
+
+?>
+<?php
 //the navbar of home farmers view is requiresd in all farmers view pages
 require views_path("farmerOtherviews/constantnavview");?>
 <div class="container-fluid border col-lg-5 col-md-6 pt-2 bg-light  myclassmargintop" >
