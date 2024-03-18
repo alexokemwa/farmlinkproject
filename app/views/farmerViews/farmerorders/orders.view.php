@@ -5,6 +5,7 @@ require views_path("farmerOtherviews/constantnavview");?>
             <div class="row">
             <div class="col-2 col-lg d-none d-lg-block"> <!-- Apply classes to hide on smaller screens -->
                 <?php require views_path("farmerOtherviews/sidebarnav");?>
+
            </div> 
             <div class="col-12 col-lg-10 mystylemainbodyfullview" > <!-- Adjust columns for larger screens -->
             <div class="row mb-5">
@@ -31,9 +32,9 @@ require views_path("farmerOtherviews/constantnavview");?>
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <div class="card mystlylecardheight">
                     <div class="card-body">
-                        <h5 class="card-title">pending orders</h5>
+                        <h5 class="card-title">cart orders</h5>
                         <p class="card-text">view pending orders and make neccessary actions</p>
-                        <a href="?page_name=pendingorders" class="btn btn-primary">click here</a>
+                        <a href="?page_name=cart" class="btn btn-primary">click here</a>
                     </div>
                     </div>
                 </div>
@@ -41,7 +42,7 @@ require views_path("farmerOtherviews/constantnavview");?>
                     <div class="card mystlylecardheight">
                     <div class="card-body">
                         <h5 class="card-title">ontransit orders</h5>
-                        <p class="card-text">check your ontransit orders and do neccessary actions</p>
+                        <p class="card-text">check your ontransit orders and do neccessary actions on time</p>
                         <a href="?page_name=ontransit" class="btn btn-primary">click here</a>
                     </div>
                     </div>
