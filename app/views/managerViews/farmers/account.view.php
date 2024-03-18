@@ -4,14 +4,14 @@
  
 ?>
   <?php require views_path("managerOtherviews/nav");?>
-    <div class="container-fluid myclassmargintop table-responsive" style="overflow-y: auto;" >
+    <div class="container-fluid myclassmargintop table-responsive " style="overflow-y: auto;" >
     <div class="row">
            <div class="col-2 col-lg d-none d-lg-block"> <!-- Apply classes to hide on smaller screens -->
               <?php require views_path("managerOtherviews/sidebarnav");?>
           
 
            </div> 
-           <div class="col-12 col-lg-10 mystylemainbodyfullview"> <!-- Adjust columns for larger screens -->
+           <div class="col-12 col-lg-10 "> <!-- Adjust columns for larger screens -->
            <section>
             <h2 class="myclassacounthead">farmer accounts</h2>
             <div class="container "></div>
