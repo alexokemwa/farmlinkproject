@@ -3,8 +3,8 @@ session_start();
 if (!isset($_SESSION["user"])) {
     header("Location: index.php?page_name=login");
  }
-
-
+?>
+<?php
 require "../app/core/database.php"; 
 
 
