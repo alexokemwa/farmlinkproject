@@ -8,8 +8,12 @@ if (!isset($_SESSION["user"])) {
 <?php
 //the navbar of home farmers view is requiresd in all farmers view pages
 require views_path("farmerOtherviews/constantnavview");?>
+
         <div class="container-fluid myclassmargintop" >
+
             <div class="row">
+        <h4><span class="mystlyehomeorderbtn"><a href="?page_name=makeorder" >make order</a></span></h4> 
+
             <div class="col-2 col-lg d-none d-lg-block"> <!-- Apply classes to hide on smaller screens -->
                 <?php require views_path("farmerOtherviews/sidebarnav");?>
 

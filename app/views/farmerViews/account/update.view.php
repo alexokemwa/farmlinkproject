@@ -15,7 +15,7 @@ require views_path("farmerOtherviews/constantnavview");?>
     require "../app/core/database.php";
     if (isset($_SESSION["user"])) {
         $user_id = $_SESSION["user"];
-    $sql = "SELECT * FROM farmers";
+    $sql = "SELECT * FROM farmers WHERE id = $user_id";
     $all_users = mysqli_query($conn, $sql);
     if (mysqli_num_rows($all_users) > 0) {
         while ($row = mysqli_fetch_assoc($all_users)) {

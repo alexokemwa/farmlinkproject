@@ -11,7 +11,9 @@ if (!isset($_SESSION["user"])) {
 <?php
 //the navbar of home farmers view is requiresd in all farmers view pages
 require views_path("farmerOtherviews/constantnavview");?>
+
         <div class="container-fluid myclassmargintop table-responsive" >
+
     <div class="row">
            <div class="col-2 col-lg d-none d-lg-block"> <!-- Apply classes to hide on smaller screens -->
             <?php require views_path("farmerOtherviews/sidebarnav");?>
@@ -35,7 +37,9 @@ require views_path("farmerOtherviews/constantnavview");?>
             </tr>
           </thead>
           <?php
-          $sql = "SELECT * FROM orders where payment_status = 'active' ";
+          if (isset($_SESSION["user"])) {
+            $user_id = $_SESSION["user"];
+          $sql = "SELECT * FROM orders where payment_status = 'active' and farmer_id = $user_id ";
           $all_users = mysqli_query($conn,$sql);
           if(mysqli_num_rows($all_users) > 0){
           while($row = mysqli_fetch_assoc($all_users)){
@@ -75,7 +79,11 @@ require views_path("farmerOtherviews/constantnavview");?>
                 </tbody>
                 
               ";
-            }}
+            }
+            echo "<div class='text-center'>
+          <a href='?page_name=printactive' class='btn btn-primary'>Print</a>
+        </div>";
+          }
             else{
                 echo "
                 <button class='btn btn-primary'style='
@@ -84,10 +92,11 @@ require views_path("farmerOtherviews/constantnavview");?>
                 color:white; 
                 font-weight:70px;
                 '>add order</a></button>";
-              }
+              }}
           ?>
           
         </table>
+        
        </section>
            </div>
         </div>

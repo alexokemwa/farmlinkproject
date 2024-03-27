@@ -35,15 +35,17 @@ require views_path("farmerOtherviews/constantnavview");?>
             </tr>
           </thead>
           <?php
-          $sql = "SELECT order_id, order_type, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
+          if (isset($_SESSION["user"])) {
+            $user_id = $_SESSION["user"];
+          $sql = "SELECT order_id,farmer_id, order_type, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
           FROM (
-              SELECT order_id, order_type, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
+              SELECT order_id,farmer_id, order_type, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
               FROM orders
               UNION
-              SELECT order_id, order_type, pickup_location, delivery_location, goods_type, goods_weight,payment_status, total_price
+              SELECT order_id,farmer_id, order_type, pickup_location, delivery_location, goods_type, goods_weight,payment_status, total_price
               FROM orderscart
           ) AS combined_orders
-          WHERE payment_status = 'ontransit'";
+          WHERE payment_status = 'ontransit' and farmer_id = $user_id";
   
   // Execute the SQL query
   $result = mysqli_query($conn, $sql);
@@ -89,7 +91,11 @@ require views_path("farmerOtherviews/constantnavview");?>
                 </tbody>
                 
               ";
-            }}
+            }
+            echo "<div class='text-center'>
+            <a href='?page_name=printontransitorder' class='btn btn-primary'>Print</a>
+          </div>";
+          }
             else{
                 echo "
                 <button class='btn btn-primary'style='
@@ -98,10 +104,11 @@ require views_path("farmerOtherviews/constantnavview");?>
                 color:white; 
                 font-weight:70px;
                 '>add order</a></button>";
-              }
+              }}
           ?>
           
         </table>
+       
        </section>
            </div>
         </div>

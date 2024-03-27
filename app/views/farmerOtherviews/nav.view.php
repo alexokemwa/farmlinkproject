@@ -27,10 +27,14 @@
             reports
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="?page_name=order">orders</a></li>
+            <li><a class="dropdown-item" href="?page_name=order">orders history</a></li>
             <li><a class="dropdown-item" href="?page_name=payment">payment</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="?page_name=market">markets</a></li>
+            <li><a class="dropdown-item" href="?page_name=market">farm input report</a></li>
+            <li><a class="dropdown-item" href="?page_name=marketoutlet">market outlet</a></li>
+            <li><a class="dropdown-item" href="?page_name=pendingreportorder">pending order</a></li>
+            <li><a class="dropdown-item" href="?page_name=printactive">active orders</a></li>
+            <li><a class="dropdown-item" href="?page_name=printontransitorder">ontransit</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown  myclass">
@@ -46,6 +50,11 @@
         </li>
           <li class="nav-item myclass d-lg-block">
             <a class="nav-link" href="../app/core/farmercores/logout.php"><i class="fa-solid fa-right-from-bracket"></i></a>
+          </li>
+          <li class="nav-item myclass d-lg-block">
+            <a class="nav-link" href="?page_name=contactus">
+            <i class="fa-solid fa-phone-volume"></i>
+            </a>
           </li>
 
       </ul>

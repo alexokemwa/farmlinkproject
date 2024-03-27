@@ -5,21 +5,22 @@ if (!isset($_SESSION["user"])) {
  }
 
 ?>
-<?php require views_path("otherviews/header");?>
 <?php require "../app/core/database.php"; ?>
 
 <?php
+
 //the navbar of home farmers view is requiresd in all farmers view pages
 require views_path("farmerOtherviews/constantnavview");?>
-        <div class="container-fluid myclassmargintop table-responsive" >
-    <div class="row">
-           <div class="col-2 col-lg d-none d-lg-block"> <!-- Apply classes to hide on smaller screens -->
-            <?php require views_path("farmerOtherviews/sidebarnav");?>
-           
+<div class="container-fluid myclassmargintop" >
+        <h1>markets</h1>
+        <h4><?php echo APP_NAME;?></h4>
+        <div class="row">
+            <div class="col-2 col-lg d-none d-lg-block"> <!-- Apply classes to hide on smaller screens -->
+                <?php require views_path("farmerOtherviews/farmerreportssidebar");?>
            </div> 
-           <div class="col-12 col-lg-10 "> <!-- Adjust columns for larger screens -->
-           <section>
-          <h2 class="myclassacounthead">your orders history</h2>
+            <div class="col-12 col-lg-10 mystylemainbodyfullview"> <!-- Adjust columns for larger screens -->
+            <section>
+          <h2 class="myclassacounthead">your active orders</h2>
           <div class="container"></div>
         <table class="table table-hover">
           <thead class="table-success">
@@ -31,19 +32,13 @@ require views_path("farmerOtherviews/constantnavview");?>
               <th scope="col">goods_type</th>
               <th scope="col">payment_status</th>
               <th scope="col">total_price</th>
-              <th scope="col">actions</th>
             </tr>
           </thead>
           <?php
            if (isset($_SESSION["user"])) {
             $user_id = $_SESSION["user"];
-          $sql = "SELECT order_id,farmer_id, order_type, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
-          FROM orders
-          WHERE farmer_id = $user_id
-          UNION
-          SELECT order_id,farmer_id, order_type, pickup_location, delivery_location, goods_type, goods_weight,  payment_status, total_price
-          FROM orderscart
-          WHERE  farmer_id = $user_id";
+            $sql = "SELECT * FROM orders where payment_status = 'active' and farmer_id = $user_id ";
+
             $all_orders = mysqli_query($conn, $sql);
             
             if (mysqli_num_rows($all_orders) > 0) {
@@ -69,28 +64,11 @@ require views_path("farmerOtherviews/constantnavview");?>
                           <td>$payment_status</td>
                           <td>$total_price</td>
                           <td>
-                        <button class='btn btn-primary'><a href='?page_name=MPESApayment'class = 'text-light'style = 'text-decoration:none;
-                font-size:20px;
-                color:white; 
-                font-weight:70px;
-                '>pay</a></button>
-                          <button class='btn btn-danger'><a href='../app/core/farmercores/deleteorderhistory.php?del_id=$order_id''class = 'text-light'style = 'text-decoration:none;
-                font-size:20px;
-                color:white; 
-                font-weight:70px;
-                '><i class='fa-solid fa-trash-can'></i></a></button>
-                    </td>
-                    </tr>
-                </tbody>
-                
-              ";
-            }
-          echo "<div class='text-center'>
-          <a href='?page_name=order' class='btn btn-primary'>Print</a>
-        </div>";
-          }
+                        ";
+            }}
             else{
                 echo "
+                <h1>no order history to print</h1>
                 <button class='btn btn-primary'style='
                 ;'><a href='?page_name=makeorder'class = 'text-light' style = 'text-decoration:none;
                 font-size:29px;
@@ -101,13 +79,15 @@ require views_path("farmerOtherviews/constantnavview");?>
           ?>
           
         </table>
-        
-        
+        <div class="text-center">
+        <button onclick="window.print();" class="btn btn-primary" id="print-btn">Print</button>
+      </div>
        </section>
-           </div>
-        </div>
+            </div>
+            </div>
       
-    </div>
+     
+   
     </div>
 
 <?php require views_path("otherviews/footer");?>

@@ -35,7 +35,10 @@ require views_path("farmerOtherviews/constantnavview");?>
             </tr>
           </thead>
           <?php
-          $sql = "SELECT * FROM orderscart where payment_status = 'Pending' ";
+          if (isset($_SESSION["user"])) {
+            $user_id = $_SESSION["user"];
+        // $sql = "SELECT * FROM farmers WHERE id = $user_id";
+          $sql = "SELECT * FROM orderscart where payment_status = 'Pending' and farmer_id=$user_id";
           $all_users = mysqli_query($conn,$sql);
           if(mysqli_num_rows($all_users) > 0){
           while($row = mysqli_fetch_assoc($all_users)){
@@ -75,7 +78,11 @@ require views_path("farmerOtherviews/constantnavview");?>
                 </tbody>
                 
               ";
-            }}
+            }
+            echo "<div class='text-center'>
+          <a href='?page_name=pendingreportorder' class='btn btn-primary'>Print</a>
+        </div>";
+          }
             else{
                 echo "
                 <button class='btn btn-primary'style='
@@ -84,10 +91,11 @@ require views_path("farmerOtherviews/constantnavview");?>
                 color:white; 
                 font-weight:70px;
                 '>add order</a></button>";
-              }
+              }}
           ?>
           
         </table>
+        
        </section>
            </div>
         </div>

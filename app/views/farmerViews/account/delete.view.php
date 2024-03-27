@@ -13,8 +13,10 @@ require views_path("farmerOtherviews/constantnavview");?>
         <h1>delete account</h1>
         <?php
     require "../app/core/database.php";
-
-    $sql = "SELECT * FROM farmers";
+    if (isset($_SESSION["user"])) {
+        $user_id = $_SESSION["user"];
+    $sql = "SELECT * FROM farmers WHERE id = $user_id";
+    // $sql = "SELECT * FROM farmers";
     $all_users = mysqli_query($conn, $sql);
     if (mysqli_num_rows($all_users) > 0) {
         while ($row = mysqli_fetch_assoc($all_users)) {
@@ -37,7 +39,7 @@ require views_path("farmerOtherviews/constantnavview");?>
                    </div>
             </div>';
         }
-    }
+    }}
     ?>
     </div>
 

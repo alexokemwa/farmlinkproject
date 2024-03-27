@@ -15,16 +15,17 @@ require views_path("farmerOtherviews/constantnavview");?>
             <h4>goods on sale</h4>
             <?php
             require "../app/core/database.php"; 
-
-          $sql = "SELECT order_id, order_type, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
+            if (isset($_SESSION["user"])) {
+                $user_id = $_SESSION["user"];
+          $sql = "SELECT order_id, order_type,farmer_id, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
           FROM (
-              SELECT order_id, order_type, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
+              SELECT order_id, order_type,farmer_id, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
               FROM orders
               UNION
-              SELECT order_id, order_type, pickup_location, delivery_location, goods_type, goods_weight,payment_status, total_price
+              SELECT order_id, order_type,farmer_id, pickup_location, delivery_location, goods_type, goods_weight,payment_status, total_price
               FROM orderscart
           ) AS combined_orders
-          WHERE payment_status = 'ontransit' and order_type = 'market outlet'";
+          WHERE payment_status = 'ontransit'and farmer_id = $user_id and order_type = 'market outlet'";
   
   // Execute the SQL query
             $result = mysqli_query($conn, $sql);
@@ -60,23 +61,24 @@ require views_path("farmerOtherviews/constantnavview");?>
     }
         else{
             echo" no goods";
-        }
+        }}
         ?>
             </div>
             <div class="col-lg-6">
             <h4>farm input orders</h4>
             <?php
             require "../app/core/database.php"; 
-
-          $sql = "SELECT order_id, order_type, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
+            if (isset($_SESSION["user"])) {
+                $user_id = $_SESSION["user"];
+          $sql = "SELECT order_id, order_type,farmer_id, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
           FROM (
-              SELECT order_id, order_type, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
+              SELECT order_id, order_type,farmer_id, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
               FROM orders
               UNION
-              SELECT order_id, order_type, pickup_location, delivery_location, goods_type, goods_weight,payment_status, total_price
+              SELECT order_id, order_type,farmer_id, pickup_location, delivery_location, goods_type, goods_weight,payment_status, total_price
               FROM orderscart
           ) AS combined_orders
-          WHERE  order_type = 'farm input'";
+          WHERE  order_type = 'farm input' AND farmer_id = $user_id ";
   
   // Execute the SQL query
             $result = mysqli_query($conn, $sql);
@@ -113,7 +115,7 @@ require views_path("farmerOtherviews/constantnavview");?>
         else{
             echo" no goods";
 
-        }
+        }}
         ?>
             </div>
            
