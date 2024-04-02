@@ -2,19 +2,19 @@
               <div class="sidebar-sticky mystylesidebarsticky">
                 <ul class="nav flex-column ">
                   <li class="nav-item">
-                  <img src="../asserts/images/farmerimages/tea.jpeg" alt="tea">
+                  <!-- <img src="../asserts/images/farmerimages/tea.jpeg" alt="tea"> -->
                     
                   </li>
                   <li class="nav-item">
-                  <img src="../asserts/images/farmerimages/ngano.jpeg" alt="">
+                  <!-- <img src="../asserts/images/farmerimages/ngano.jpeg" alt=""> -->
                     
                   </li>
                   <li class="nav-item">
-                  <img src="../asserts/images/farmerimages/maize.jpeg" alt="">
+                  <!-- <img src="../asserts/images/farmerimages/maize.jpeg" alt=""> -->
 
                   </li>
                   <li class="nav-item">
-                  <img src="../asserts/images/farmerimages/tea.jpeg" alt="">
+                  <!-- <img src="../asserts/images/farmerimages/tea.jpeg" alt=""> -->
 
                   </li>
                   
