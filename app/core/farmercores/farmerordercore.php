@@ -33,10 +33,10 @@ if (isset($_POST["submit"])) {
     }
 
     if (empty($errors)) {
-        $sql = "INSERT INTO orders (farmer_id, pickup_location, delivery_location, goods_type, goods_weight, total_price, payment_status) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO orders (farmer_id,order_type, pickup_location, delivery_location, goods_type, goods_weight, total_price, payment_status) VALUES (?,?, ?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_stmt_init($conn);
         if (mysqli_stmt_prepare($stmt, $sql)) {
-            mysqli_stmt_bind_param($stmt, "sssssss", $farmer_id, $pickup_location, $delivery_location, $goods_type, $goods_weight, $total_price, $payment_status);
+            mysqli_stmt_bind_param($stmt, "ssssssss", $farmer_id,$order_type, $pickup_location, $delivery_location, $goods_type, $goods_weight, $total_price, $payment_status);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
             mysqli_close($conn);

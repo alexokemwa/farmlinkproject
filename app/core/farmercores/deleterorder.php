@@ -1,20 +1,21 @@
-
 <?php
 
 require "../database.php";
 
- if(isset($_GET['del_id'])){
-    $id = $_GET['del_id'];
+if(isset($_POST['delbtn'])){
+    $id = $_POST['product_id'];
+    
     $sql = "DELETE FROM orders where order_id =$id";
-    $result =mysqli_query($conn,$sql);
+    $result = mysqli_query($conn,$sql);
     if($result){
-        echo"delete successful";
-        header('location: ../../../public/homepage.php?page_name=activeorders');
-
-
+        // Return HTTP status code for success and appropriate message
+        http_response_code(200);
+        echo json_encode(array("message" => "Delete successful"));
     }
     else{
-        die("Something failed");
+        // Return HTTP status code for failure and appropriate message
+        http_response_code(500);
+        echo json_encode(array("message" => "Delete failed"));
     }
-   }                 
-
+}
+?>

@@ -2,8 +2,8 @@
 
 require "../database.php";
 
-if (isset($_GET['del_id'])) {
-    $id = $_GET['del_id'];
+if(isset($_POST['delbtnhistory'])){
+    $id = $_POST['product_id'];
 
     // Delete from orders table
     $sql_orders = "DELETE FROM orders WHERE order_id = ?";
@@ -18,12 +18,14 @@ if (isset($_GET['del_id'])) {
     $result_cart = mysqli_stmt_execute($stmt_cart);
 
     if ($result_orders && $result_cart) {
-        echo "Deletion successful";
-        // Redirect to some page after deletion
-        header('location: ../../../public/homepage.php?page_name=orderhistory');
-        exit; // Terminate script execution after redirection
-    } else {
-        die("Something failed");
+        // Return HTTP status code for success and appropriate message
+        http_response_code(200);
+        echo json_encode(array("message" => "Delete successful"));
+    }
+    else{
+        // Return HTTP status code for failure and appropriate message
+        http_response_code(500);
+        echo json_encode(array("message" => "Delete failed"));
     }
 }
 ?>
