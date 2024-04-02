@@ -20,7 +20,7 @@ require views_path("farmerOtherviews/constantnavview");?>
            <div class="col-12 col-lg-10 "> <!-- Adjust columns for larger screens -->
            <section>
           <h2 class="myclassacounthead">on transit history</h2>
-          <div class="container"></div>
+          <div id="activetable">
         <table class="table table-hover">
           <thead class="table-success">
             <tr>
@@ -81,11 +81,8 @@ require views_path("farmerOtherviews/constantnavview");?>
                 color:white; 
                 font-weight:70px;
                 '>pay</a></button>
-                          <button class='btn btn-danger'><a href='../app/core/farmercores/deleteontransit.php?del_id=$order_id''class = 'text-light'style = 'text-decoration:none;
-                font-size:20px;
-                color:white; 
-                font-weight:70px;
-                '><i class='fa-solid fa-trash-can'></i></a></button>
+                <button class='btn btn-danger delbtnontransit' value='$order_id' 
+                ><i class='fa-solid fa-trash-can'></i></a></button>
                     </td>
                     </tr>
                 </tbody>
@@ -108,7 +105,7 @@ require views_path("farmerOtherviews/constantnavview");?>
           ?>
           
         </table>
-       
+        </div>
        </section>
            </div>
         </div>

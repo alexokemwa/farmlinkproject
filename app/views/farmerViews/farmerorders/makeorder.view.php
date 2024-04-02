@@ -47,24 +47,39 @@ require views_path("farmerOtherviews/constantnavview");?>
                         <div class="col-md-4">
                                 <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01" >order_type</label>
-                                <select name="order_type" class="form-select" id="inputGroupSelect01">
-                                    <option selected>Choose...</option>
-                                    <option value="farm input">farm input</option>
-                                    <option value="market outlet">market outlet</option>
-                            
+                                <select name="order_type" class="form-select" id="inputGroupSelect01" required>
+                                <option value="">Choose...</option>
+                                
+                                <?php
+                                    $sql = "SELECT * FROM order_types";
+                                    $all_goods = mysqli_query($conn, $sql);
+                                    if (mysqli_num_rows($all_goods) > 0) {
+                                        while ($row = mysqli_fetch_assoc($all_goods)) {
+                                            $goods = $row['name'];
+                                            echo '<option value="' . $goods . '">' . $goods . '</option>';
+                                        }
+                                    }
+                                    ?>
+
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-4">
                                         <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01" >pickup_location</label>
-                                <select name="pickup_location" class="form-select" id="inputGroupSelect01">
-                                    <option selected>Choose...</option>
-                                    <option value="cuk">cuk</option>
-                                    <option value="bomas">bomas</option>
-                                    <option value="rongai">rongai</option>
-                                    <option value="gataka">gataka</option>
-                                    <option value="cuea">cuea</option>
+                                <select name="pickup_location" class="form-select" id="inputGroupSelect01" required>
+                                    <option value= "">Choose...</option>
+                                    <?php
+                                    $sql = "SELECT * FROM locations";
+                                    $all_locations = mysqli_query($conn, $sql);
+                                    if (mysqli_num_rows($all_locations) > 0) {
+                                        while ($row = mysqli_fetch_assoc($all_locations)) {
+                                            $location = $row['location_name'];
+                                            echo '<option value="' . $location . '">' . $location . '</option>';
+                                        }
+                                    }
+                                    ?>
+
                             
                                 </select>
                             </div>
@@ -72,13 +87,19 @@ require views_path("farmerOtherviews/constantnavview");?>
                         <div class="col-md-4">
                                 <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01" >delivery_location</label>
-                                <select name="delivery_location" class="form-select" id="inputGroupSelect01">
-                                    <option selected>Choose...</option>
-                                    <option value="cuk">cuk</option>
-                                    <option value="bomas">bomas</option>
-                                    <option value="rongai">rongai</option>
-                                    <option value="gataka">gataka</option>
-                                    <option value="cuea">cuea</option>
+                                <select name="delivery_location" class="form-select" id="inputGroupSelect01" required>
+                                    <option value = "">Choose...</option>
+                                    <?php
+                                    $sql = "SELECT * FROM locations";
+                                    $all_locations = mysqli_query($conn, $sql);
+                                    if (mysqli_num_rows($all_locations) > 0) {
+                                        while ($row = mysqli_fetch_assoc($all_locations)) {
+                                            $location = $row['location_name'];
+                                            echo '<option value="' . $location . '">' . $location . '</option>';
+                                        }
+                                    }
+                                    ?>
+
                             
                                 </select>
                             </div>
@@ -86,15 +107,24 @@ require views_path("farmerOtherviews/constantnavview");?>
                         </div>
                     </div>
                     <div class="container mt-5">
+
                         <div class="row justify-content-between">
                         <div class="col-md-4">
                             <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01" >goods_type</label>
-                                <select name="goods_type" class="form-select" id="inputGroupSelect01">
-                                    <option selected>Choose...</option>
-                                    <option value="cereals">cereals</option>
-                                    <option value="perishables">perishables</option>
-                               </select>
+                                <select name="goods_type" class="form-select" id="inputGroupSelect01" required>
+                                    <option value = "">Choose...</option>
+                                    <?php
+                                    $sql = "SELECT * FROM goods_types";
+                                    $all_goods = mysqli_query($conn, $sql);
+                                    if (mysqli_num_rows($all_goods) > 0) {
+                                        while ($row = mysqli_fetch_assoc($all_goods)) {
+                                            $goods = $row['goods_type_name'];
+                                            echo '<option value="' . $goods . '">' . $goods . '</option>';
+                                        }
+                                    }
+                                    ?>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-4">
