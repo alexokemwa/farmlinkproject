@@ -40,8 +40,15 @@ require views_path("farmerOtherviews/constantnavview");
 
 <div class="container-fluid border col-lg-5 col-md-6 pt-2 bg-light myclassmargintop pb-4">
     <!-- <h1>Mpesa Payment</h1> -->
-    <form action="?page_name=MPESApayment" method="post">
-            <h3>mpesa payment</h3>
+    <?php
+    
+    ?>
+    <?php
+    //  require "../app/views/farmerViews/farmerorders/mpesa/stkpush.view.php";
+    ?>
+    <form action="?page_name=stkpush" method="post">
+           
+    <h3>mpesa payment</h3>
             <br>
             <div class="input-group mb-3">
                 <span class="input-group-text mympsastyle" id="basic-addon1">total_amount</span>
@@ -50,7 +57,7 @@ require views_path("farmerOtherviews/constantnavview");
     
             <div class="mb-3">
                 <label for="exampleFormControlInput1 mympsastyle" class="form-label">input phone number</label>
-                <input type="tel" class="form-control" name="email" id="exampleFormControlInput1" placeholder="0700000000" maxlength="10">
+                <input type="tel" class="form-control" name="phone" id="exampleFormControlInput1" placeholder="0700000000" maxlength="10">
 
             </div>
            
