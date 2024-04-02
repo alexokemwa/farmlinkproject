@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.delbtn').click(function (e) { 
+    $('.delbtnhistory').click(function (e) { 
         e.preventDefault();
         var id = $(this).attr('value');
         // alert(id);
@@ -14,10 +14,10 @@ $(document).ready(function () {
             if (willDelete) {
              $.ajax({
                 type: "POST",
-                url: "../app/core/farmercores/deleterorder.php",
+                url: "../app/core/farmercores/deleteorderhistory.php",
                 data: {
                     product_id: id,
-                    delbtn: true
+                    delbtnhistory: true
                 },
                 success: function (response) {
                     // Handle success response here

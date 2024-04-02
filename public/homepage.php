@@ -15,6 +15,10 @@ if(file_exists("../app/controllers/farmers/" . $controller . ".php")) {
 }
 elseif(file_exists("../app/controllers/farmers/farmerorders/mpesa/" . $controller . ".php")) {
     require "../app/controllers/farmers/farmerorders/mpesa/" . $controller . ".php";
-}else {
+}
+elseif(file_exists("../app/controllers/farmers/farmerorders/mpesa/darajacallback" . $controller . ".php")) {
+    require "../app/controllers/farmers/farmerorders/mpesa/darajacallback/" . $controller . ".php";
+}
+else {
     echo "Controller not found";
 }
