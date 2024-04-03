@@ -16,7 +16,7 @@ require views_path("farmerOtherviews/constantnavview");?>
                 <?php require views_path("farmerOtherviews/farmerhomesidebar1nav");?>
             </div> 
             
-            <div class="col-12 col-lg-8 mystylemainbodyfullview " > <!-- Adjust columns for larger screens -->
+            <div class="col-12 col-lg-10 mystylemainbodyfullview " > <!-- Adjust columns for larger screens -->
             <div class="row mb-5">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <div class="card mystlylecardheight">
@@ -64,9 +64,7 @@ require views_path("farmerOtherviews/constantnavview");?>
                 </div>
                 </div>
             </div>
-            <div class="col-2 col-lg d-none d-lg-block"> 
-            <?php require views_path("farmerOtherviews/farmersidebar2nav");?>
-           </div>
+            
             </div>
 
 

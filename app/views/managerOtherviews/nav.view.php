@@ -72,7 +72,12 @@
               <a href="?page_name=delete" class="dropdown-item myclassrotatepointer">delete</a>
             </li>
             </ul>
-          
+            <li class="nav-item  myclass  ">
+          <a class="nav-link active" aria-current="page"  href="?page_name=home">add_place</a>
+          </li>
+          <li class="nav-item  myclass  ">
+            <a class="nav-link active" aria-current="page"  href="?page_name=home">add_goods</a>
+          </li>
            </ul>
            
            
