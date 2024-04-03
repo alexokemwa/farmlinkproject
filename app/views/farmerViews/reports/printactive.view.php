@@ -12,7 +12,6 @@ if (!isset($_SESSION["user"])) {
 //the navbar of home farmers view is requiresd in all farmers view pages
 require views_path("farmerOtherviews/constantnavview");?>
 <div class="container-fluid myclassmargintop" >
-        <h1>markets</h1>
         <h4><?php echo APP_NAME;?></h4>
         <div class="row">
             <div class="col-2 col-lg d-none d-lg-block"> <!-- Apply classes to hide on smaller screens -->
@@ -63,9 +62,13 @@ require views_path("farmerOtherviews/constantnavview");?>
                           <td>$goods_type</td>
                           <td>$payment_status</td>
                           <td>$total_price</td>
-                          <td>
+                          
                         ";
-            }}
+            }
+            echo '<div class="text-center">
+            <button onclick="window.print();" class="btn btn-primary" id="print-btn">Print</button>
+          </div>';
+          }
             else{
                 echo "
                 <h1>no order history to print</h1>
@@ -79,9 +82,7 @@ require views_path("farmerOtherviews/constantnavview");?>
           ?>
           
         </table>
-        <div class="text-center">
-        <button onclick="window.print();" class="btn btn-primary" id="print-btn">Print</button>
-      </div>
+       
        </section>
             </div>
             </div>

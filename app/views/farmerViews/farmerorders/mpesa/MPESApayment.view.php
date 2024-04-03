@@ -4,55 +4,53 @@ if (!isset($_SESSION["user"])) {
     header("Location: index.php?page_name=login");
 }
 ?>
-<?php require "../app/core/database.php"; ?>
-
 <?php
-$sql = "SELECT order_id, order_type, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
+//the navbar of home farmers view is required in all farmers view pages
+require views_path("farmerOtherviews/constantnavview");
+?>
+
+
+
+<div class="container-fluid border col-lg-5 col-md-6 pt-2 bg-light myclassmargintop pb-4">
+    <!-- <h1>Mpesa Payment</h1> -->
+    
+    <form action="?page_name=stkpush" method="post">
+        <?php
+    require "../app/core/database.php";
+if (isset($_SESSION["user"])) {
+    $user_id = $_SESSION["user"];
+$sql = "SELECT order_id,farmer_id, order_type, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
         FROM (
-            SELECT order_id, order_type, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
+            SELECT order_id,farmer_id, order_type, pickup_location, delivery_location, goods_type, goods_weight, payment_status, total_price
             FROM orders
             UNION
-            SELECT order_id, order_type, pickup_location, delivery_location, goods_type, goods_weight,payment_status, total_price
+            SELECT order_id,farmer_id, order_type, pickup_location, delivery_location, goods_type, goods_weight,payment_status, total_price
             FROM orderscart
         ) AS combined_orders
-        WHERE payment_status = 'active'";
+        WHERE payment_status = 'active' and farmer_id = $user_id";
 
 // Execute the SQL query
 $result = mysqli_query($conn, $sql);
 
 // Initialize total price variable
-$total_price = 0;
+$total_price1 = 0;
 
 // Check if any rows were returned
 if(mysqli_num_rows($result) > 0) {
     // Loop through each row in the result set
     while($row = mysqli_fetch_assoc($result)) {
         // Accumulate total price
-        $total_price += $row["total_price"];
+        $total_price = $row["total_price"];
+        $total_price1 +=$total_price ;
     }
-}
+}}
 ?>
-
-<?php
-//the navbar of home farmers view is required in all farmers view pages
-require views_path("farmerOtherviews/constantnavview");
-?>
-
-<div class="container-fluid border col-lg-5 col-md-6 pt-2 bg-light myclassmargintop pb-4">
-    <!-- <h1>Mpesa Payment</h1> -->
-    <?php
-    
-    ?>
-    <?php
-    //  require "../app/views/farmerViews/farmerorders/mpesa/stkpush.view.php";
-    ?>
-    <form action="?page_name=stkpush" method="post">
            
     <h3>mpesa payment</h3>
             <br>
             <div class="input-group mb-3">
                 <span class="input-group-text mympsastyle" id="basic-addon1">total_amount</span>
-                <input type="text" class="form-control" name="total_amount" value="<?php echo $total_price?>" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" name="total_amount" value="<?php echo $total_price1;?>" aria-label="Username" aria-describedby="basic-addon1">
             </div>
     
             <div class="mb-3">

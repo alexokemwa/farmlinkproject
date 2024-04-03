@@ -62,9 +62,13 @@ require views_path("farmerOtherviews/constantnavview");?>
                           <td>$goods_type</td>
                           <td>$payment_status</td>
                           <td>$total_price</td>
-                          <td>
+                          
                         ";
-            }}
+            }
+          echo '<div class="text-center">
+          <button onclick="window.print();" class="btn btn-primary" id="print-btn">Print</button>
+        </div>';
+          }
             else{
                 echo "
                 <h1>no order history to print</h1>
@@ -78,9 +82,7 @@ require views_path("farmerOtherviews/constantnavview");?>
           ?>
           
         </table>
-        <div class="text-center">
-        <button onclick="window.print();" class="btn btn-primary" id="print-btn">Print</button>
-      </div>
+        
        </section>
             </div>
             </div>

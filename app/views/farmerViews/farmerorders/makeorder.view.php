@@ -4,24 +4,7 @@ if (!isset($_SESSION["user"])) {
     header("Location: index.php?page_name=login");
  }
 ?>
-<?php
-require "../app/core/database.php"; 
 
-
-
-    // Fetch data for the logged-in user
-    $sql = "SELECT * FROM orderstates";
-          $all_users = mysqli_query($conn,$sql);
-          if(mysqli_num_rows($all_users) > 0){
-          while($row = mysqli_fetch_assoc($all_users)){
-              $state_id = $row['id'];
-              $state = $row['states'];
-              $payment = $row['payment'];
-              
-          }
-        }
-
-?>
 
 <?php
 //the navbar of home farmers view is requiresd in all farmers view pages
@@ -140,7 +123,7 @@ require views_path("farmerOtherviews/constantnavview");?>
                                     <div class="col-md-4">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">total_price</span>
-                                            <input type="text" id="total_price" class="form-control" placeholder=<?php echo "$payment"?> aria-label="total_price" name="total_price" aria-describedby="basic-addon1" readonly required>
+                                            <input type="text" id="total_price" class="form-control" placeholder="total" aria-label="total_price" name="total_price" aria-describedby="basic-addon1" readonly required>
                                         </div>
                                     </div>
                             </div>

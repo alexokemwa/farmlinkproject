@@ -57,12 +57,16 @@ require views_path("farmerOtherviews/constantnavview");?>
                           <td> $Amount</td>
                           <td>$CreatedAt</td>
                           
-                          <td>
+                          
                         ";
-            }}
+            }
+            echo '<div class="text-center">
+            <button onclick="window.print();" class="btn btn-primary" id="print-btn">Print</button>
+          </div>';
+          }
             else{
                 echo "
-                <h1>no order history to print</h1>
+                <h1>no payment history to print</h1>
                 <button class='btn btn-primary'style='
                 ;'><a href='?page_name=makeorder'class = 'text-light' style = 'text-decoration:none;
                 font-size:29px;
@@ -73,9 +77,7 @@ require views_path("farmerOtherviews/constantnavview");?>
           ?>
           
         </table>
-        <div class="text-center">
-        <button onclick="window.print();" class="btn btn-primary" id="print-btn">Print</button>
-      </div>
+        
        </section>
             </div>
             </div>
